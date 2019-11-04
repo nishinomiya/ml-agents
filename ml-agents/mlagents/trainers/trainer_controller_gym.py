@@ -258,7 +258,7 @@ class TrainerController(object):
             and (steps != 0)
             and (self.resampling_interval)
             and (steps % self.resampling_interval == 0)
-            or env.env.global_done #Katz
+            or env.env.global_done
         )
         if meta_curriculum_reset or generalization_reset:
             self.end_trainer_episodes(env, lessons_incremented)
